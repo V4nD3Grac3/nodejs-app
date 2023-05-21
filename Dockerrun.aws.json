@@ -1,0 +1,17 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Authentication": {
+    "Bucket": "adjdkjhad",
+    "Key": "config.json"
+  },
+  "Image": {
+    "Name": "834549009763.dkr.ecr.us-east-1.amazonaws.com/simple-node",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 3000,
+      "HostPort": 80
+    }
+  ]
+}
