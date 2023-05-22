@@ -1,14 +1,15 @@
+'use strict';
 const express = require("express");
 const app = express();
+const path = require('path');
+
+const PORT = 8080;
+const HOST = '0.0.0.0';
 
 app.get("/", (req, res) => {
-    res.send("<h1 style='color: red'> Hi, This is page home in my express app</h1>");
+        const filePath = path.join(__dirname, 'public', 'index.html');
+        res.sendFile(filePath);
 });
 
-app.get("/info", (req, res) => {
-    res.send("<a href='https://google.com'> open google to search</a>");
-});
-
-app.listen(3000, () => {
-    console.log("Listening on port 3000");
-});
+app.listen(PORT, HOST);
+console.log(`running on port $PORT`);
